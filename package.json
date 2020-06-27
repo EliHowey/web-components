@@ -1,0 +1,23 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "description": "A set of Web Components for general purpose development, created with accessibility in mind",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliHowey/web-components.git"
+  },
+  "keywords": [
+    "Web",
+    "Components"
+  ],
+  "author": "Eli Howey",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/EliHowey/web-components/issues"
+  },
+  "homepage": "https://github.com/EliHowey/web-components#readme"
+}
