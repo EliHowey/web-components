@@ -1,5 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { expect, fixture } from '@open-wc/testing';
+// eslint-disable-next-line no-unused-vars
+import { Toggletip } from './custom-toggletip.js';
 
 const template = `
 	<custom-toggletip>
