@@ -1,79 +1,82 @@
 {
-  "name": "web-components",
-  "version": "1.0.0",
-  "description": "A set of Web Components for general purpose development, created with accessibility in mind",
-  "main": "index.js",
-  "module": "index.js",
-  "scripts": {
-    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
-    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
-    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
-    "format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
-    "format": "npm run format:eslint && npm run format:prettier",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EliHowey/web-components.git"
-  },
-  "keywords": [
-    "Web",
-    "Components"
-  ],
-  "author": "Eli Howey",
-  "license": "Unlicense",
-  "bugs": {
-    "url": "https://github.com/EliHowey/web-components/issues"
-  },
-  "homepage": "https://github.com/EliHowey/web-components#readme",
-  "devDependencies": {
-    "@commitlint/cli": "^9.0.1",
-    "@commitlint/config-conventional": "^9.0.1",
-    "@open-wc/eslint-config": "^2.0.6",
-    "commitizen": "^4.1.2",
-    "commitlint": "^9.0.1",
-    "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^7.3.1",
-    "eslint-config-prettier": "^6.11.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "@open-wc/eslint-config",
-      "eslint-config-prettier"
+    "name": "web-components",
+    "version": "1.0.0",
+    "description": "A set of Web Components for general purpose development, created with accessibility in mind",
+    "main": "index.js",
+    "module": "index.js",
+    "scripts": {
+        "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+        "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+        "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
+        "format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore",
+        "lint": "npm run lint:eslint && npm run lint:prettier",
+        "format": "npm run format:eslint && npm run format:prettier",
+        "serve": "es-dev-server --app-index index.html --node-resolve --watch --open",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/EliHowey/web-components.git"
+    },
+    "keywords": [
+        "Web",
+        "Components"
     ],
-    "rules": {
-      "wc/no-constructor-attributes": "off"
+    "author": "Eli Howey",
+    "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/EliHowey/web-components/issues"
+    },
+    "homepage": "https://github.com/EliHowey/web-components#readme",
+    "devDependencies": {
+        "@commitlint/cli": "^9.0.1",
+        "@commitlint/config-conventional": "^9.0.1",
+        "@open-wc/eslint-config": "^2.0.6",
+        "commitizen": "^4.1.2",
+        "commitlint": "^9.0.1",
+        "cz-conventional-changelog": "^3.2.0",
+        "es-dev-server": "^1.56.0",
+        "eslint": "^7.3.1",
+        "eslint-config-prettier": "^6.11.0",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.11",
+        "prettier": "^2.0.5"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "eslintConfig": {
+        "extends": [
+            "@open-wc/eslint-config",
+            "eslint-config-prettier"
+        ],
+        "rules": {
+            "wc/no-constructor-attributes": "off"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true,
+        "arrowParens": "avoid"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "arrowParens": "avoid"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  }
 }
