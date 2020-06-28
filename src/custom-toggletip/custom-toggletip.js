@@ -41,6 +41,13 @@ const template = htmlTemplate`
 
 `;
 
+/**
+ * An element that shows or hides some content when its trigger is activated.
+ *
+ * @export
+ * @class Toggletip
+ * @extends {HTMLElement}
+ */
 export class Toggletip extends HTMLElement {
     constructor() {
         super();
