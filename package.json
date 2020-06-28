@@ -1,5 +1,5 @@
 {
-    "name": "web-components",
+    "name": "@elihowey/web-components",
     "version": "1.0.0",
     "description": "A set of Web Components for general purpose development, created with accessibility in mind",
     "main": "main.js",
