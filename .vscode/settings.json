@@ -3,5 +3,5 @@
         "source.fixAll.eslint": true
     },
     "git.inputValidationLength": 100,
-    "conventionalCommits.scopes": ["utils", "custom-toggletip"]
+    "conventionalCommits.scopes": ["custom-toggletip", "docs", "utils"]
 }
