@@ -18,7 +18,7 @@ const template = htmlTemplate`
 			box-sizing: border-box;
 			min-width: min-content;
 			width: max-content;
-			max-width: var(--toggletip-max-width, calc(100vw - 2rem));
+			max-width: var(--toggletip-max-width, calc(50vw - 2rem));
 			border: thin solid rgba(0, 0, 0, 0.25);
 			padding: 1em;
 
