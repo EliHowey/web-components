@@ -62,3 +62,5 @@ export class Toggletip extends HTMLElement {
         this._toggleButton.setAttribute('aria-expanded', !isToggled);
     }
 }
+
+customElements.define('custom-toggletip', Toggletip);
