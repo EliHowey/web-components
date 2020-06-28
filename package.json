@@ -2,8 +2,8 @@
     "name": "web-components",
     "version": "1.0.0",
     "description": "A set of Web Components for general purpose development, created with accessibility in mind",
-    "main": "index.js",
-    "module": "index.js",
+    "main": "main.js",
+    "module": "main.js",
     "scripts": {
         "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
         "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
