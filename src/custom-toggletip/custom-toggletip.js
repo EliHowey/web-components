@@ -18,7 +18,7 @@ const template = htmlTemplate`
 			box-sizing: border-box;
 			min-width: min-content;
 			width: max-content;
-			max-width: var(--toggletip-max-width, calc(100vw - 2rem));
+			max-width: var(--toggletip-max-width, calc(50vw - 2rem));
 			border: thin solid rgba(0, 0, 0, 0.25);
 			padding: 1em;
 
@@ -41,6 +41,13 @@ const template = htmlTemplate`
 
 `;
 
+/**
+ * An element that shows or hides some content when its trigger is activated.
+ *
+ * @export
+ * @class Toggletip
+ * @extends {HTMLElement}
+ */
 export class Toggletip extends HTMLElement {
     constructor() {
         super();
@@ -62,3 +69,5 @@ export class Toggletip extends HTMLElement {
         this._toggleButton.setAttribute('aria-expanded', !isToggled);
     }
 }
+
+customElements.define('custom-toggletip', Toggletip);
