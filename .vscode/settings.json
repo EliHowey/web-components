@@ -2,5 +2,6 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "git.inputValidationLength": 100
+    "git.inputValidationLength": 100,
+    "conventionalCommits.scopes": ["utils", "custom-toggletip"]
 }
